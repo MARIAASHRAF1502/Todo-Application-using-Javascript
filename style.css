@@ -1,0 +1,262 @@
+*
+{
+    padding:0px;
+    margin:0px;
+}
+
+body{
+    font-family:calibri;
+    background-color:rgb(243, 242, 242);
+}
+#header
+{
+    background-color: #9D9D94C4;
+    height:fit-content;
+    width:auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+i{
+    font-size: 100px;
+    padding:10px;
+}
+
+.title
+{
+    font-family:calibri;
+    font-size:40px;
+    padding:10px;
+}
+
+#header
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media (max-width:600px)
+{
+    #header
+    {
+        flex-direction:column;
+        width: 600px;
+    }
+}
+
+#msg
+{
+    text-align: center;
+    color:green;
+    font-size:30px;
+    font-weight: bold;
+    visibility:hidden;
+}
+
+#event
+{
+    width:fit-content;
+    height:fit-content;
+    border:0.5px solid black;
+    border-radius:10px;
+    margin:20px;
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    align-content:space-between;
+    flex-direction:column;
+}
+
+
+#eventblock
+{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#errormessage
+{
+    padding:20px 0 0 0;
+    font-size:20px;
+    font-style: italic;
+    color:rgb(248, 8, 8);
+}
+
+
+#createbtn
+{
+    background-color: #0899B9;
+    border:1px solid rgb(6, 57, 133);
+    color:#ffff;
+    margin:20px;
+    height:30px;
+    width:70px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size:15px;
+    font-weight:500;
+    font-family:calibri;
+}
+
+#list
+{
+    width:450px;
+    height:fit-content;
+    border:0.5px solid black;
+    border-radius:10px;
+    margin:20px;
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:baseline;
+    visibility: hidden;
+}
+
+#listblock
+{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+#list>input[type=text]
+{
+    width:300px;
+    border-radius: 5px;
+    border:0.5px solid black;
+    height:30px;
+    padding: 0 5px;
+}
+
+.addbtn
+{
+    background-color:rgba(234, 217, 67, 1);
+    border:1px solid rgba(135, 137, 15, 1);
+    /* border:0.5px solid black; */
+    color:black;
+    margin:20px;
+    height:35px;
+    width:90px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size:15px;
+    font-weight:bold;
+}
+ul>li{
+    /* background-color: rgba(255, 255, 255, 0.959); */
+    border-radius:5px;
+    list-style: none;
+    border:1px solid black;
+    margin-top:10px;
+    margin-right:20px;
+    width:390px;
+    height:fit-content;
+    text-align: center;
+    padding:10px;
+    /* hidding the list section from the view */
+    /* visibility: hidden; */
+}
+
+#dustbin 
+{
+    position:relative;
+    float:right;
+    padding:0 1px 0 0 ;
+    font-size:20px;
+    color:red;
+}
+
+#dustbin:hover{
+    font-size: 22px;
+    transition: 0.5ms;
+}
+
+#edustbin:hover{
+    color:red;
+}
+
+#submitbtn
+{
+    background-color: rgba(37, 166, 16, 1);
+    color:#ffff;
+    font-weight:500;
+    margin:10px;
+    padding:10px;
+    width:100px;
+    height:40px;
+    border:1px solid rgb(1, 59, 16);
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+
+#Event
+{
+    width:450px;
+    height:fit-content;
+    border:0.5px solid black;
+    border-radius:10px;
+    margin:20px;
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:baseline;
+    position:relative;
+    visibility: hidden;
+}
+
+#Eventblock
+{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    /* visibility: hidden; */
+}
+
+#edustbin
+{
+   position:absolute;
+   top:10px;
+   right:10px;
+   font-size:25px;
+   padding:10px;
+   
+}
+
+#eventtitle
+{
+  font-family:sans-serif;
+  font-size:30px;   
+}
+
+#donebtn
+{
+    background-color: rgba(250, 143, 17, 1);
+    color:#ffff;
+    font-weight:500;
+    margin:10px;
+    padding:10px;
+    width:100px;
+    height:40px;
+    border:0.5px solid rgba(0, 0, 0, 0.548);
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+#tick
+{
+    position:relative;
+    /* text-align: right; */
+    float:right;
+    padding:0 1rem 0 0 ;
+    font-size:20px;
+    color:rgb(10, 161, 10);
+}

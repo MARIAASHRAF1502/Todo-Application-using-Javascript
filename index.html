@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do Application</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <div ng-app="app" ng-controller="todo">
+        <!-- Title block -->
+        <div id="header">
+            <div><i class="fas fa-clipboard-list"></i></div>
+            <div class="title"> To Do Application<br>
+                <p style="font-size:15px; padding:10px;">Share your works with us and be punctual</p>
+            </div>
+        </div>
+
+        <!-- Event name Block -->
+        <div id="eventblock">
+            <div id="event">
+                <div>Enter event name : <input type="text" id="eventname" ng-model="name"
+                        style="border-radius: 5px; border:0.5px solid black;height:20px;padding: 0 5px;"></div>
+                        <p id="errormessage"></p>
+                <div><input type="button" value="create" id="createbtn" ng-click="showlist()"></div>
+            </div>
+        </div>
+
+        <!-- completed message block -->
+        <p id="msg">{{name}} Event Successfully Completed.</p>
+
+        <!-- Adding list block -->
+        <div id="listblock">
+            <div id="list">
+                <input type="text" ng-model="listvalue" id="ls">
+                <input type="button" value="Add" class="addbtn" ng-click="add()">
+                <ul>
+                    <li ng-repeat="i in list">{{i}}
+                        <i class="fas fa-trash" id="dustbin" ng-click="delete(i)"></i>
+                    </li>
+                </ul>
+                <input type="button" value="Submit" id="submitbtn" ng-click="showevent()">
+            </div>
+        </div>
+
+
+        <!-- Final Event list -->
+
+        <div id="Eventblock">
+            <div id="Event">
+            <div id="eventtitle">{{name}}<i class="fas fa-trash" id="edustbin" ng-click="remove()"></i></div>
+            <ul>
+                    <li ng-repeat="i in list">{{i}}
+                        <i class="fas fa-check" id="tick" ng-click="delete(i)"></i>
+                    </li>
+            </ul>
+            <input type="button" value="Done" id="donebtn" ng-click="done()">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Angular JS CDN File
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    javascript file
+    <script src="script.js"></script> -->
+
+    <!-- icon CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</body>
+
+</html>
